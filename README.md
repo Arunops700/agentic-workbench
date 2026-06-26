@@ -11,6 +11,17 @@ server + client. Fully testable offline with a scripted policy — no keys, no s
 
 ---
 
+## ⚡ Quick Start
+
+```bash
+git clone https://github.com/Arunops700/agentic-workbench.git && cd agentic-workbench
+uv sync --extra dev          # installs everything — no API keys needed
+uv run agent run "what is 12 * (3 + 4)?"     # the agent picks the calculator tool
+```
+*Runs fully offline (heuristic policy).* Add `ANTHROPIC_API_KEY` to `.env` for real Claude tool-use.
+
+---
+
 ## Problem
 
 Agents are the hardest part of production AI: the LLM is maybe 20% of the system, and the other 80%
